@@ -1,0 +1,42 @@
+# Adjust the SVG so the four lines are evenly spaced from the top to the bottom of the circle
+svg_content_final = """
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="black"/>
+  <g transform="translate(256, 256)">
+    <!-- Circular grid structure -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#00FF00" stroke-width="5"/>
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="#00FF00" stroke-width="5"/>
+    <line x1="0" y1="-120" x2="0" y2="120" stroke="#00FF00" stroke-width="5"/>
+    <line x1="-84" y1="-84" x2="84" y2="84" stroke="#00FF00" stroke-width="5"/>
+    <line x1="-84" y1="84" x2="84" y2="-84" stroke="#00FF00" stroke-width="5"/>
+    
+    <!-- Dots on the circular grid -->
+    <circle cx="-60" cy="0" r="5" fill="#00FF00"/>
+    <circle cx="60" cy="0" r="5" fill="#00FF00"/>
+    <circle cx="0" cy="60" r="5" fill="#00FF00"/>
+    <circle cx="0" cy="-60" r="5" fill="#00FF00"/>
+
+    <!-- The number 4 -->
+    <text x="-70" y="80" font-family="Arial" font-size="240" fill="white" font-weight="bold">4</text>
+    
+    <!-- Lines extending to the right -->
+    <line x1="120" y1="-120" x2="200" y2="-120" stroke="#00FF00" stroke-width="5"/>
+    <line x1="120" y1="-40" x2="200" y2="-40" stroke="#00FF00" stroke-width="5"/>
+    <line x1="120" y1="40" x2="200" y2="40" stroke="#00FF00" stroke-width="5"/>
+    <line x1="120" y1="120" x2="200" y2="120" stroke="#00FF00" stroke-width="5"/>
+
+    <!-- Dots at the end of the lines -->
+    <circle cx="200" cy="-120" r="5" fill="#00FF00"/>
+    <circle cx="200" cy="-40" r="5" fill="#00FF00"/>
+    <circle cx="200" cy="40" r="5" fill="#00FF00"/>
+    <circle cx="200" cy="120" r="5" fill="#00FF00"/>
+  </g>
+</svg>
+"""
+
+# Save the final SVG file
+svg_path_final = "/mnt/data/newlogo_final_512.svg"
+with open(svg_path_final, "w") as svg_file:
+    svg_file.write(svg_content_final)
+
+svg_path_final
